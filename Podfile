@@ -12,5 +12,6 @@ target 'Steam' do
     pod 'FBSDKShareKit'
     pod 'GoogleSignIn'
     pod 'SwiftyJSON'
+    pod 'Alamofire'
 
 end
