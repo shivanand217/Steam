@@ -7,14 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1805702D20EB4C480098C608 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1805702C20EB4C480098C608 /* credentials.plist */; };
 		18587AF020EA64B700DDC6F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18587AEF20EA64B700DDC6F8 /* AppDelegate.swift */; };
 		18587AF220EA64B700DDC6F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18587AF120EA64B700DDC6F8 /* ViewController.swift */; };
 		18587AF520EA64B700DDC6F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18587AF320EA64B700DDC6F8 /* Main.storyboard */; };
 		18587AF720EA64B800DDC6F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18587AF620EA64B800DDC6F8 /* Assets.xcassets */; };
 		18587AFA20EA64B800DDC6F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18587AF820EA64B800DDC6F8 /* LaunchScreen.storyboard */; };
+		18823EDB20EB553500E1983A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18823EDA20EB553500E1983A /* GameViewController.swift */; };
+		18823EE120EB5FDE00E1983A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18823EE020EB5FDE00E1983A /* Game.swift */; };
+		18823EE420EB626700E1983A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18823EE320EB626700E1983A /* Constants.swift */; };
+		18823EE620EB673600E1983A /* steamGames.json in Resources */ = {isa = PBXBuildFile; fileRef = 18823EE520EB673600E1983A /* steamGames.json */; };
+		18823EE820EB688000E1983A /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18823EE720EB688000E1983A /* Games.swift */; };
+		18823EEB20EC1AF300E1983A /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18823EEA20EC1AF300E1983A /* GameCell.swift */; };
+		38DCE2A9D18C23592B29F1F0 /* Pods_Steam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB469767667A313C4244C17 /* Pods_Steam.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		099974662EAD62D4B47DADC5 /* Pods-Steam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Steam.release.xcconfig"; path = "Pods/Target Support Files/Pods-Steam/Pods-Steam.release.xcconfig"; sourceTree = "<group>"; };
+		1805702C20EB4C480098C608 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		18587AEC20EA64B700DDC6F8 /* Steam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Steam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18587AEF20EA64B700DDC6F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18587AF120EA64B700DDC6F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +32,16 @@
 		18587AF620EA64B800DDC6F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18587AF920EA64B800DDC6F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18587AFB20EA64B800DDC6F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18823EDA20EB553500E1983A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		18823EDC20EB593A00E1983A /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Solid.ttf"; sourceTree = "<group>"; };
+		18823EDD20EB593A00E1983A /* Pokemon Hollow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Hollow.ttf"; sourceTree = "<group>"; };
+		18823EE020EB5FDE00E1983A /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		18823EE320EB626700E1983A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		18823EE520EB673600E1983A /* steamGames.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = steamGames.json; sourceTree = "<group>"; };
+		18823EE720EB688000E1983A /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
+		18823EEA20EC1AF300E1983A /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
+		4AB0E267403827FBD583712D /* Pods-Steam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Steam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Steam/Pods-Steam.debug.xcconfig"; sourceTree = "<group>"; };
+		8BB469767667A313C4244C17 /* Pods_Steam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Steam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38DCE2A9D18C23592B29F1F0 /* Pods_Steam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +61,8 @@
 			children = (
 				18587AEE20EA64B700DDC6F8 /* Steam */,
 				18587AED20EA64B700DDC6F8 /* Products */,
+				A0E045E8FD7FBF282D09A9EB /* Pods */,
+				22502FB0E038737452E23008 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +77,72 @@
 		18587AEE20EA64B700DDC6F8 /* Steam */ = {
 			isa = PBXGroup;
 			children = (
+				18823EE920EC1AA400E1983A /* Controller */,
+				18823EE220EB625500E1983A /* Utils */,
+				18823EDF20EB5FC900E1983A /* View */,
+				18823EDE20EB5FBB00E1983A /* Model */,
 				18587AEF20EA64B700DDC6F8 /* AppDelegate.swift */,
-				18587AF120EA64B700DDC6F8 /* ViewController.swift */,
 				18587AF320EA64B700DDC6F8 /* Main.storyboard */,
 				18587AF620EA64B800DDC6F8 /* Assets.xcassets */,
 				18587AF820EA64B800DDC6F8 /* LaunchScreen.storyboard */,
+				1805702C20EB4C480098C608 /* credentials.plist */,
 				18587AFB20EA64B800DDC6F8 /* Info.plist */,
+				18823EDD20EB593A00E1983A /* Pokemon Hollow.ttf */,
+				18823EDC20EB593A00E1983A /* Pokemon Solid.ttf */,
+				18823EE520EB673600E1983A /* steamGames.json */,
 			);
 			path = Steam;
+			sourceTree = "<group>";
+		};
+		18823EDE20EB5FBB00E1983A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18823EE020EB5FDE00E1983A /* Game.swift */,
+				18823EE720EB688000E1983A /* Games.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18823EDF20EB5FC900E1983A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18823EEA20EC1AF300E1983A /* GameCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18823EE220EB625500E1983A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				18823EE320EB626700E1983A /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		18823EE920EC1AA400E1983A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18587AF120EA64B700DDC6F8 /* ViewController.swift */,
+				18823EDA20EB553500E1983A /* GameViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22502FB0E038737452E23008 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BB469767667A313C4244C17 /* Pods_Steam.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0E045E8FD7FBF282D09A9EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4AB0E267403827FBD583712D /* Pods-Steam.debug.xcconfig */,
+				099974662EAD62D4B47DADC5 /* Pods-Steam.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +152,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18587AFE20EA64B800DDC6F8 /* Build configuration list for PBXNativeTarget "Steam" */;
 			buildPhases = (
+				7443E1B86FEE70F60BB4334F /* [CP] Check Pods Manifest.lock */,
 				18587AE820EA64B700DDC6F8 /* Sources */,
 				18587AE920EA64B700DDC6F8 /* Frameworks */,
 				18587AEA20EA64B700DDC6F8 /* Resources */,
+				4CE0E8C3A85770EA4A3A27E0 /* [CP] Embed Pods Frameworks */,
+				663498AD9A6A30129F612D63 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,20 +207,104 @@
 			buildActionMask = 2147483647;
 			files = (
 				18587AFA20EA64B800DDC6F8 /* LaunchScreen.storyboard in Resources */,
+				1805702D20EB4C480098C608 /* credentials.plist in Resources */,
 				18587AF720EA64B800DDC6F8 /* Assets.xcassets in Resources */,
 				18587AF520EA64B700DDC6F8 /* Main.storyboard in Resources */,
+				18823EE620EB673600E1983A /* steamGames.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4CE0E8C3A85770EA4A3A27E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Steam/Pods-Steam-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Steam/Pods-Steam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		663498AD9A6A30129F612D63 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Steam/Pods-Steam-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Steam/Pods-Steam-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7443E1B86FEE70F60BB4334F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Steam-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18587AE820EA64B700DDC6F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18823EE420EB626700E1983A /* Constants.swift in Sources */,
 				18587AF220EA64B700DDC6F8 /* ViewController.swift in Sources */,
+				18823EE120EB5FDE00E1983A /* Game.swift in Sources */,
+				18823EE820EB688000E1983A /* Games.swift in Sources */,
+				18823EDB20EB553500E1983A /* GameViewController.swift in Sources */,
 				18587AF020EA64B700DDC6F8 /* AppDelegate.swift in Sources */,
+				18823EEB20EC1AF300E1983A /* GameCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +446,7 @@
 		};
 		18587AFF20EA64B800DDC6F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AB0E267403827FBD583712D /* Pods-Steam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +464,7 @@
 		};
 		18587B0020EA64B800DDC6F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 099974662EAD62D4B47DADC5 /* Pods-Steam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
