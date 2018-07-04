@@ -9,91 +9,175 @@ import Alamofire
 
 class Game {
 
-    private var _name: String!
-    private var _isFree: Bool!
-    private var _type: String!
-    private var _requiredAge: Int!
-    private var _detailedDescription: String!
-    private var _aboutGame: String!
-    private var _appID: String!
-    private var _gameURL: String!
-    private var _livePlayersURL: String!
-    private var _metacriticScore: String!
-    private var _recommendations: String!
-    private var _price: String!
-    private var _developer: String!
+    private var _name: String?
+    private var _isFree: String?
+    private var _type: String?
+    private var _requiredAge: String?
+    private var _detailedDescription: String?
+    private var _aboutGame: String?
+    private var _appID: String?
+    private var _gameURL: String?
+    private var _livePlayersURL: String?
+    private var _metacriticScore: String?
+    private var _recommendations: String?
+    private var _price: String?
+    private var _developer: String?
+    private var _screenShotURL1: String?
+    private var _screenShotURL2: String?
+    private var _screenShotURL3: String?
+    private var _screenShotURL4: String?
     
+    // Getters and Setters
+    var screenShotURL1: String {
+        set {
+            if _screenShotURL1 == nil {
+                _screenShotURL1 = ""
+            }
+        }
+        get {
+            return _screenShotURL1!
+        }
+    }
+    var screenShotURL2: String {
+        set {
+            if _screenShotURL2 == nil {
+                _screenShotURL2 = ""
+            }
+        }
+        get {
+            return _screenShotURL2!
+        }
+    }
+    var screenShotURL3: String {
+        set {
+            if _screenShotURL3 == nil {
+                _screenShotURL3 = ""
+            }
+        }
+        get {
+            return _screenShotURL3!
+        }
+    }
+    var screenShotURL4: String {
+        set {
+            if _screenShotURL4 == nil {
+                _screenShotURL4 = ""
+            }
+        }
+        get {
+            return _screenShotURL4!
+        }
+    }
     var type: String {
-        if _type == nil {
-            _type = ""
+        set {
+            if _type == nil {
+                _type = ""
+            }
         }
-        return _type
+        get {
+            return _type!
+        }
     }
-    
     var appId: String {
-        if _appID == nil {
-            _appID = ""
+        set {
+            if _appID == nil {
+                _appID = ""
+            }
         }
-        return _appID
+        get {
+            return _appID!
+        }
     }
-    
     var developer: String {
-        if _developer == nil {
-            _developer = ""
+        set {
+            if _developer == nil {
+                _developer = ""
+            }
         }
-        return _developer
+        get {
+            return _developer!
+        }
     }
-    
     var price: String {
-        if _price == nil {
-            _price = ""
+        set {
+            if _price == nil {
+                _price = ""
+            }
         }
-        return _price
+        get {
+            return _price!
+        }
     }
-    
     var name: String {
-        if _name == nil {
-            _name = ""
+        set {
+            if _name == nil {
+                _name = ""
+            }
         }
-        return _name
+        get {
+            return _name!
+        }
     }
-    
     var recommendations: String {
-        if _recommendations == nil {
-            _recommendations = ""
+        set {
+            if _recommendations == nil {
+                _recommendations = ""
+            }
         }
-        return _recommendations
+        get {
+            return _recommendations!
+        }
     }
-    
     var metacriticScore: String {
-        if _metacriticScore == nil {
-            _metacriticScore = ""
+        set {
+            if _metacriticScore == nil {
+                _metacriticScore = ""
+            }
         }
-        return _metacriticScore
+        get {
+            return _metacriticScore!
+        }
     }
-    
-    var isFree: Bool {
-        return _isFree
+    var isFree: String {
+        set {
+            if _isFree == nil {
+                _isFree = ""
+            }
+        }
+        get {
+            return _isFree!
+        }
     }
-    
-    var requiredAge: Int {
-        return _requiredAge
+    var requiredAge: String {
+        set {
+            if _requiredAge == nil {
+                _requiredAge = ""
+            }
+        }
+        get {
+             return _requiredAge!
+        }
     }
-    
     var detailedDescription: String {
-        if _detailedDescription == nil {
-            _detailedDescription = ""
+        set {
+            if _detailedDescription == nil {
+                _detailedDescription = ""
+            }
         }
-        return _detailedDescription
+        get {
+            return _detailedDescription!
+        }
     }
-    
     var aboutGame: String {
-        if _aboutGame == nil {
-            _aboutGame = ""
+        set {
+            if _aboutGame == nil {
+                _aboutGame = ""
+            }
         }
-        return _aboutGame
+        get {
+            return _aboutGame!
+        }
     }
-    
     init(name: String, appID: String) {
         self._name = name
         self._appID = appID

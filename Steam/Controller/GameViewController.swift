@@ -73,7 +73,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         for item in appIds {
             
             url_path += "\(item)"
-            // make the request
+            // Make the request
             Alamofire.request(url_path, method: .get).responseJSON { (response) in
                 
                 if let data = response.result.value as? Dictionary<String, Any> {
@@ -84,11 +84,34 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
                             
                             // check if the type of this appId is game
                             if data2["type"] as? String == "game" {
-                                // download the data
-                                var _game: Game!
+                    
+                                let _game: Game!
                                 
-                                _game.name = data2["name"] as? String
+                                _game.name = (data2["name"] as? String)!
                                 _game.appId = "\(item)"
+                                _game.requiredAge = (data2["required_age"] as? String)!
+                                
+                                if data2["is_free"] as? Bool == false {
+                                    _game.isFree = "false"
+                                } else {
+                                    _game.isFree = "true"
+                                }
+                                
+                                _game.detailedDescription = (data2["detailed_description"] as? String)!
+                                _game.aboutGame = (data2["about_the_game"] as? String)!
+                                
+                                if let data3 = data2["developers"] as? [String] {
+                                    _game.developer = (data3[0] as? String)!
+                                }
+                                
+                                if let price_detail = data2["price_overview"] as? Dictionary<String, Any> {
+                                    _game.price = (price_detail["final"] as? String)!
+                                }
+                                
+                                if let metacritic = data2["metacritic"] as? Dictionary<String, Any> {
+                                    _game.metacriticScore = (metacritic["score"] as? String)!
+                                }
+                                
                                 
                             }
                         }
