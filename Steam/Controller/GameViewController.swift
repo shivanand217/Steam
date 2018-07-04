@@ -3,10 +3,10 @@
 //
 //  Created by apple on 03/07/18.
 //  Copyright © 2018 shiv. All rights reserved.
-//
 
 import UIKit
 import SwiftyJSON
+import Alamofire
 
 class GameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -44,7 +44,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
             let json = try? JSONSerialization.jsonObject(with: data),
             let dictionary = json as? [String: Any],
             let app = dictionary["apps"] as? [Any]
-        else { return }
+            else { return }
         
         if let path = Bundle.main.path(forResource: "steamGames", ofType: "json") {
             
@@ -65,6 +65,39 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    func downloadGameData() {
+        
+        var url_path = "\(gameData)"
+        
+        // Download data for all the games having type as game
+        for item in appIds {
+            
+            url_path += "\(item)"
+            // make the request
+            Alamofire.request(url_path, method: .get).responseJSON { (response) in
+                
+                if let data = response.result.value as? Dictionary<String, Any> {
+                    
+                    if let data1 = data["\(item)"] as? Dictionary<String, Any> {
+                        
+                        if let data2 = data1["data"] as? Dictionary<String, Any> {
+                            
+                            // check if the type of this appId is game
+                            if data2["type"] as? String == "game" {
+                                // download the data
+                                var _game: Game!
+                                
+                                _game.name = data2["name"] as? String
+                                _game.appId = "\(item)"
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return appIds.count
     }
@@ -78,7 +111,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
                 var game : Game!
                 game = games[indexPath.row]
                 
-                cell.conigureCell(game)
+                cell.configureCell(game)
                 
                 return cell
             } else {
@@ -87,12 +120,11 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    // show details
+    // Show details
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        
         var game: Game!
         game = games[indexPath.row]
-        
         performSegue(withIdentifier: "gameDetailViewController", sender: game)
     }
     
@@ -104,7 +136,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "gameDetailViewController" {
-            if let detailsVC = segue.destination as? GameDetailVC {
+            if let detailsVC = segue.destination as? GameDetailViewController {
                 if let game = sender as? Game {
                     detailsVC.game = game
                 }

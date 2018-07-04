@@ -7,7 +7,7 @@
 import Foundation
 
 // API's
-let API_1 = "http://store.steampowered.com/api/appdetails/?appids="
+let gameData = "http://store.steampowered.com/api/appdetails/?appids="
 let playerOnline = "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?appid="
 
 let header: String = "header.jpg"

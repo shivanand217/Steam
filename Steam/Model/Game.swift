@@ -97,7 +97,7 @@ class Game {
     init(name: String, appID: String) {
         self._name = name
         self._appID = appID
-        self._gameURL = "\(API_1)\(_appID)"
+        self._gameURL = "\(gameData)\(_appID)"
     }
     
     func downloadGameDetails(completed: @escaping DownloadCompleted) {
@@ -113,7 +113,6 @@ class Game {
                     }
                 }
             }
-            
             completed()
         }
     }
