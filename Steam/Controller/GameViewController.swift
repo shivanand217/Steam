@@ -12,10 +12,11 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
     
-    
-    
     // store all the app id's
     var appIds: [String] = []
+    
+    // all info corresponding to all the appIDs
+    var games = [Game]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,6 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         
-        // decodeJSON()
         loadInitialData()
     }
 
@@ -31,7 +31,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.didReceiveMemoryWarning()
     }
     
-    // Json Parsing
+    // ParseJson
     func loadInitialData() {
         
         guard let fileName = Bundle.main.path(forResource: "steamGames", ofType: "json")
@@ -53,8 +53,6 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
                 let jsonObj = try JSON(data: data)
                 
                 for var i in (0..<jsonObj["apps"].count) {
-                    // print(jsonObj["apps"][i]["name"])
-                    // print(jsonObj["apps"][i]["appid"])
                     appIds.append("\(jsonObj["apps"][i]["appid"])")
                 }
                 
@@ -72,33 +70,46 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // deque the cell to make it reusable
-        let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath)
         
-        cell.textLabel?.text = appIds[indexPath.row]
-        
-        return cell
+        if games[indexPath.row].type == "game" {
+            // deque the cell to make it reusable
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath) as? Game {
+                
+                var game : Game!
+                game = games[indexPath.row]
+                
+                cell.conigureCell(game)
+                
+                return cell
+            } else {
+                return UICollectionViewCell()
+            }
+        }
     }
     
-    func decodeJSON() {
-        let Data = Bundle.main.path(forResource: "steamGames", ofType: "json")
-        print(Data)
+    // show details
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+        var game: Game!
+        game = games[indexPath.row]
         
-        let jsonData: String = (Bundle.main.path(forResource: "steamGames", ofType: "json") as? String)!
-        print(jsonData)
-        
-        /*guard let data = jsonData else {
-            print("Error: No data to decode")
-            return
-        }*/
-        
-//        guard let games = try? JSONDecoder().decode(Games.self, from: jsonData as ) else {
-//            print("Error: Couldn't decode data into Blog.")
-//            return
-//        }
-        
-        print("games: ")
-        //for _games in games
+        performSegue(withIdentifier: "gameDetailViewController", sender: game)
     }
-
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    // Send the data through segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "gameDetailViewController" {
+            if let detailsVC = segue.destination as? GameDetailVC {
+                if let game = sender as? Game {
+                    detailsVC.game = game
+                }
+            }
+        }
+    }
+    
 }

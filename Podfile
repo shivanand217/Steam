@@ -13,5 +13,6 @@ target 'Steam' do
     pod 'GoogleSignIn'
     pod 'SwiftyJSON'
     pod 'Alamofire'
+    pod 'AlamofireImage'
 
 end

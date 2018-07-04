@@ -6,8 +6,13 @@
 
 import Foundation
 
+// API's
 let API_1 = "http://store.steampowered.com/api/appdetails/?appids="
-let API_2 = "https://steamdb.info/api/GetGraph/?type=concurrent_week&appid="
-let image_URL = "https://steamcdn-a.akamaihd.net/steam/apps/271590/header.jpg"
+let playerOnline = "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?appid="
+
+let header: String = "header.jpg"
+let image_BASE_URL: String = "https://steamcdn-a.akamaihd.net/steam/apps/"
+
+let screenshot_BASE_URL = ""
 
 typealias DownloadCompleted = () -> ()

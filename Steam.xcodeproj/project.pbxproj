@@ -19,6 +19,7 @@
 		18823EE620EB673600E1983A /* steamGames.json in Resources */ = {isa = PBXBuildFile; fileRef = 18823EE520EB673600E1983A /* steamGames.json */; };
 		18823EE820EB688000E1983A /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18823EE720EB688000E1983A /* Games.swift */; };
 		18823EEB20EC1AF300E1983A /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18823EEA20EC1AF300E1983A /* GameCell.swift */; };
+		18823EED20ECB15900E1983A /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18823EEC20ECB15900E1983A /* GameDetailViewController.swift */; };
 		38DCE2A9D18C23592B29F1F0 /* Pods_Steam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB469767667A313C4244C17 /* Pods_Steam.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		18823EE520EB673600E1983A /* steamGames.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = steamGames.json; sourceTree = "<group>"; };
 		18823EE720EB688000E1983A /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
 		18823EEA20EC1AF300E1983A /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
+		18823EEC20ECB15900E1983A /* GameDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
 		4AB0E267403827FBD583712D /* Pods-Steam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Steam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Steam/Pods-Steam.debug.xcconfig"; sourceTree = "<group>"; };
 		8BB469767667A313C4244C17 /* Pods_Steam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Steam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -124,6 +126,7 @@
 			children = (
 				18587AF120EA64B700DDC6F8 /* ViewController.swift */,
 				18823EDA20EB553500E1983A /* GameViewController.swift */,
+				18823EEC20ECB15900E1983A /* GameDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Steam/Pods-Steam-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
@@ -240,6 +244,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
@@ -305,6 +310,7 @@
 				18823EE120EB5FDE00E1983A /* Game.swift in Sources */,
 				18823EE820EB688000E1983A /* Games.swift in Sources */,
 				18823EDB20EB553500E1983A /* GameViewController.swift in Sources */,
+				18823EED20ECB15900E1983A /* GameDetailViewController.swift in Sources */,
 				18587AF020EA64B700DDC6F8 /* AppDelegate.swift in Sources */,
 				18823EEB20EC1AF300E1983A /* GameCell.swift in Sources */,
 			);
