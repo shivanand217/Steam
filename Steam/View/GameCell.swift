@@ -15,14 +15,14 @@ class GameCell: UITableViewCell {
     @IBOutlet weak var gameNameLbl: UILabel!
     @IBOutlet weak var playersOnline: UILabel!
     
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//        
-//        let color = UIColor(red: 100.0/255.0, green: 130.0/255.0, blue: 230.0/255.0, alpha: 1.0)
-//        
-//        layer.borderColor = color.cgColor
-//        layer.cornerRadius = 9.0
-//    }
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        let color = UIColor(red: 100.0/255.0, green: 130.0/255.0, blue: 230.0/255.0, alpha: 1.0)
+        let color2 = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.5)
+        
+        layer.borderColor = color.cgColor
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,7 +37,6 @@ class GameCell: UITableViewCell {
         
         let imageUrl = "\(image_BASE_URL)\(appID)\(header)"
         Alamofire.request(imageUrl, method: .get).responseImage { (response) in
-            print("image request")
             if let image = response.result.value {
                 self.thumbImg.image = image as? UIImage
             } else {
@@ -48,11 +47,8 @@ class GameCell: UITableViewCell {
         let playersOnlineUrl = "\(playerOnline)\(appID)"
         Alamofire.request(playersOnlineUrl, method: .get).responseJSON { (response) in
             if let data = response.result.value as? Dictionary<String, Any> {
-
                 if let data1 = data["response"] as? Dictionary<String, Any> {
-
                     if let player_count = data1["player_count"] as? Int {
-                        print("player count: \(player_count)")
                         self.playersOnline.text = "\(player_count)"
                     }
                 }
@@ -61,7 +57,6 @@ class GameCell: UITableViewCell {
 
         let path = "\(gameData)\(appID)"
         Alamofire.request(path, method: .get).responseJSON { (response) in
-
             if let data = response.result.value as? Dictionary<String, Any> {
                 if let data1 = data[appID] as? Dictionary<String, Any> {
                     if let data3 = data1["data"] as? Dictionary<String, Any> {
