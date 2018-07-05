@@ -1,5 +1,5 @@
 # Steam
-an iOS app which shows info about games on Steam with live informations.
+An iOS app which shows info about games on Steam with live informations and when picked it shows detailed descriptions about the game like requiredAge, price in india, metacricitic score, popularity e.t.c.
 
 ### Screens
 Authentication            |  Game1

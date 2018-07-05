@@ -4,7 +4,6 @@
 //
 //  Created by apple on 02/07/18.
 //  Copyright © 2018 shiv. All rights reserved.
-//
 
 import UIKit
 import GoogleSignIn
