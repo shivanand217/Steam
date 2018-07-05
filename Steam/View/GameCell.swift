@@ -10,21 +10,19 @@ import Alamofire
 import AlamofireImage
 
 class GameCell: UITableViewCell {
-
+    
     @IBOutlet weak var thumbImg: UIImageView!
-    @IBOutlet weak var gameNameLabel: UILabel!
+    @IBOutlet weak var gameNameLbl: UILabel!
     @IBOutlet weak var playersOnline: UILabel!
     
-    var game: Game!
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-        let color = UIColor(red: 100.0/255.0, green: 130.0/255.0, blue: 230.0/255.0, alpha: 1.0)
-        
-        layer.borderColor = color.cgColor
-        layer.cornerRadius = 9.0
-    }
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//        
+//        let color = UIColor(red: 100.0/255.0, green: 130.0/255.0, blue: 230.0/255.0, alpha: 1.0)
+//        
+//        layer.borderColor = color.cgColor
+//        layer.cornerRadius = 9.0
+//    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,27 +33,43 @@ class GameCell: UITableViewCell {
     }
     
     // Configure cells with game item
-    func configureCell(game: Game) {
+    func configureCell(appID: String) {
         
-        let imageUrl = "\(image_BASE_URL)\(game.appId)\(header)"
-        
+        let imageUrl = "\(image_BASE_URL)\(appID)\(header)"
         Alamofire.request(imageUrl, method: .get).responseImage { (response) in
-            guard let image = response.result.value else {
-                self.thumbImg.image = UIImage()
-                return
+            print("image request")
+            if let image = response.result.value {
+                self.thumbImg.image = image as? UIImage
+            } else {
+                self.thumbImg.image = UIImage(named: "batman")
             }
-            self.thumbImg.image = image
         }
-        
-        let playersOnlineUrl = "\(playerOnline)\(game.appId)"
-        print(playersOnlineUrl)
-        
-        // get players online
+
+        let playersOnlineUrl = "\(playerOnline)\(appID)"
         Alamofire.request(playersOnlineUrl, method: .get).responseJSON { (response) in
-            
+            if let data = response.result.value as? Dictionary<String, Any> {
+
+                if let data1 = data["response"] as? Dictionary<String, Any> {
+
+                    if let player_count = data1["player_count"] as? Int {
+                        print("player count: \(player_count)")
+                        self.playersOnline.text = "\(player_count)"
+                    }
+                }
+            }
         }
-        
-        gameNameLabel.text = game.name
+
+        let path = "\(gameData)\(appID)"
+        Alamofire.request(path, method: .get).responseJSON { (response) in
+
+            if let data = response.result.value as? Dictionary<String, Any> {
+                if let data1 = data[appID] as? Dictionary<String, Any> {
+                    if let data3 = data1["data"] as? Dictionary<String, Any> {
+                        self.gameNameLbl.text = data3["name"] as? String
+                    }
+                }
+            }
+        }
         
     }
 

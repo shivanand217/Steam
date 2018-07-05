@@ -34,8 +34,8 @@
 		18587AF920EA64B800DDC6F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18587AFB20EA64B800DDC6F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18823EDA20EB553500E1983A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		18823EDC20EB593A00E1983A /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Solid.ttf"; sourceTree = "<group>"; };
-		18823EDD20EB593A00E1983A /* Pokemon Hollow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Hollow.ttf"; sourceTree = "<group>"; };
+		18823EDC20EB593A00E1983A /* Steam.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Steam.ttf; sourceTree = "<group>"; };
+		18823EDD20EB593A00E1983A /* Steam1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Steam1.ttf; sourceTree = "<group>"; };
 		18823EE020EB5FDE00E1983A /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		18823EE320EB626700E1983A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		18823EE520EB673600E1983A /* steamGames.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = steamGames.json; sourceTree = "<group>"; };
@@ -89,8 +89,8 @@
 				18587AF820EA64B800DDC6F8 /* LaunchScreen.storyboard */,
 				1805702C20EB4C480098C608 /* credentials.plist */,
 				18587AFB20EA64B800DDC6F8 /* Info.plist */,
-				18823EDD20EB593A00E1983A /* Pokemon Hollow.ttf */,
-				18823EDC20EB593A00E1983A /* Pokemon Solid.ttf */,
+				18823EDD20EB593A00E1983A /* Steam1.ttf */,
+				18823EDC20EB593A00E1983A /* Steam.ttf */,
 				18823EE520EB673600E1983A /* steamGames.json */,
 			);
 			path = Steam;
@@ -459,7 +459,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Steam/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cs.Steam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -474,7 +477,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Steam/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cs.Steam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

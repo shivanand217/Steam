@@ -10,7 +10,7 @@ import Foundation
 let gameData = "http://store.steampowered.com/api/appdetails/?appids="
 let playerOnline = "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?appid="
 
-let header: String = "header.jpg"
+let header: String = "/header.jpg"
 let image_BASE_URL: String = "https://steamcdn-a.akamaihd.net/steam/apps/"
 
 let screenshot_BASE_URL = ""

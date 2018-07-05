@@ -32,22 +32,15 @@ class GameDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        game.downloadGameDetails {
-            self.updateUI()
-        }
-        
-        nameLbl.text = game.name
-        if game.isFree == true {
-            isFreeLbl.text = "NO"
-        } else {
-            isFreeLbl.text = "YES"
-        }
+//        game.downloadGameDetails {
+//            self.updateUI()
+//        }
     }
     
     func updateUI() {
         
         nameLbl.text = "\(game.name)"
-        if game.isFree == true {
+        if game.isFree == "true" {
             isFreeLbl.text = "NO"
         } else {
             isFreeLbl.text = "YES"
