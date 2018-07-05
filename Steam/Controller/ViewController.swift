@@ -18,7 +18,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().delegate = self
         
-        let signInButton = GIDSignInButton(frame: CGRect(x: 80, y: 600, width: 100, height: 50))
+        let signInButton = GIDSignInButton(frame: CGRect(x: 145, y: 600, width: 100, height: 50))
         view.addSubview(signInButton)
     }
     
