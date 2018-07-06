@@ -12,7 +12,7 @@ import AlamofireImage
 
 class GameDetailViewController: UIViewController {
     
-    var appid: String!
+    var passedValue: String = ""
     
     @IBOutlet weak var _nameLbl: UILabel!
     @IBOutlet weak var _mainImg: UIImageView!
@@ -40,20 +40,22 @@ class GameDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        downloadAndUpdateData()
-        updateScreenShots()
+        print("passedvalue: \(passedValue)")
+        
+        //downloadAndUpdateData()
+        //updateScreenShots()
     }
     
     func downloadAndUpdateData() {
         
-        var url_path = "\(gameData)"
-        url_path = url_path + appid
+        var url_path = "url is burr: \(gameData)"
+        print(url_path)
         
         Alamofire.request(url_path, method: .get).responseJSON { (response) in
             
             if let data = response.result.value as? Dictionary<String, Any> {
                 
-                if let data1 = data[self.appid] as? Dictionary<String, Any> {
+                if let data1 = data[self.passedValue] as? Dictionary<String, Any> {
                     
                     if let data2 = data1["data"] as? Dictionary<String, Any> {
                         
@@ -61,7 +63,7 @@ class GameDetailViewController: UIViewController {
                         if data2["type"] as? String == "game" {
                             
                             let name = (data2["name"] as? String)!
-                            let appID = self.appid
+                            let appID = self.passedValue
                             
                             self._nameLbl.text = name
                             
@@ -148,6 +150,12 @@ class GameDetailViewController: UIViewController {
                 self.screenShot4.image = UIImage(named: "batman")
             }
         }
+        
     }
 
+    
+    @IBAction func backBtnPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }

@@ -9,3 +9,7 @@ Authentication            |  Game1
 Game2            |  Game3
 :-------------------------:|:-------------------------:
 ![Screen4](../master/Steam/screen/2.png)  |  ![Screen4](../master/Steam/screen/3.png)
+
+DetailsGTA1            |  DetailsGTA1
+:-------------------------:|:-------------------------:
+![Screen4](../master/Steam/screen/5.png)  |  ![Screen4](../master/Steam/screen/6.png)

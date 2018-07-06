@@ -111,8 +111,8 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     // Show details
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        var appid = appIds[indexPath.row]
-        performSegue(withIdentifier: "gameDetailViewController", sender: appid)
+        let game = appIds[indexPath.row]
+        performSegue(withIdentifier: "gameDetailViewController", sender: self)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -123,8 +123,8 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if segue.identifier == "gameDetailViewController" {
             if let detailsVC = segue.destination as? GameDetailViewController {
-                if let appid = sender as? String {
-                    detailsVC.appid = appid
+                if let game = sender as? String {
+                    detailsVC.passedValue = game
                 }
             }
         }

@@ -189,8 +189,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yb3-ha-QvA">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dota-2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRY-YC-km5">
-                                                        <rect key="frame" x="158" y="34" width="59" height="30"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GTA-5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRY-YC-km5">
+                                                        <rect key="frame" x="162" y="34" width="51" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="HCn-D8-v0q"/>
                                                         </constraints>
@@ -218,6 +218,9 @@
                                                         <state key="normal" image="344330-200">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="backBtnPressed:" destination="gAG-or-0Hp" eventType="touchUpInside" id="Ut4-4U-XeA"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -234,7 +237,7 @@
                                                     <constraint firstItem="ThD-R8-UaP" firstAttribute="leading" secondItem="Yb3-ha-QvA" secondAttribute="leading" constant="8" id="vG0-mU-5Nb"/>
                                                 </constraints>
                                             </view>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="batman" translatesAutoresizingMaskIntoConstraints="NO" id="YwL-hy-7vN">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="YwL-hy-7vN">
                                                 <rect key="frame" x="88" y="107" width="200" height="194"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="194" id="hSf-W2-33y"/>
@@ -242,7 +245,7 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="fce-Sz-ADl">
-                                                <rect key="frame" x="70" y="309" width="235.5" height="20.5"/>
+                                                <rect key="frame" x="70.5" y="309" width="235.5" height="20.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lWI-7Q-Ov3">
                                                         <rect key="frame" x="0.0" y="0.0" width="99.5" height="20.5"/>
@@ -281,19 +284,19 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="e8l-Tp-wPQ">
-                                                <rect key="frame" x="65" y="360" width="246" height="20.5"/>
+                                                <rect key="frame" x="65" y="359.5" width="246" height="21"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ep7-AN-QCi">
-                                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="21"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GameID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGT-Np-TdE">
-                                                                <rect key="frame" x="0.0" y="0.0" width="52.5" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="52.5" height="21"/>
                                                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123213" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUB-Pg-6Em">
-                                                                <rect key="frame" x="62.5" y="0.0" width="57" height="20.5"/>
+                                                                <rect key="frame" x="62.5" y="0.0" width="57" height="21"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
@@ -301,16 +304,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YYm-UW-WnR">
-                                                        <rect key="frame" x="169.5" y="0.0" width="76.5" height="20.5"/>
+                                                        <rect key="frame" x="169.5" y="0.0" width="76.5" height="21"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oid-eP-4fY">
-                                                                <rect key="frame" x="0.0" y="0.0" width="38" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="38" height="21"/>
                                                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$80" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3p-it-s5L">
-                                                                <rect key="frame" x="48" y="0.0" width="28.5" height="20.5"/>
+                                                                <rect key="frame" x="48" y="0.0" width="28.5" height="21"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
@@ -323,19 +326,19 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="jbb-2r-IIG">
-                                                <rect key="frame" x="22" y="410" width="332.5" height="20.5"/>
+                                                <rect key="frame" x="21.5" y="409.5" width="332.5" height="21"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pNn-zl-XDJ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="111.5" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="111.5" height="21"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metacritic:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhr-dy-w3t">
-                                                                <rect key="frame" x="0.0" y="0.0" width="82.5" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="82.5" height="21"/>
                                                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIL-PH-Gk9">
-                                                                <rect key="frame" x="92.5" y="0.0" width="19" height="20.5"/>
+                                                                <rect key="frame" x="92.5" y="0.0" width="19" height="21"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
@@ -343,16 +346,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HpL-x7-ABb">
-                                                        <rect key="frame" x="151.5" y="0.0" width="181" height="20.5"/>
+                                                        <rect key="frame" x="151.5" y="0.0" width="181" height="21"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommendation:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cwz-uz-B3f">
-                                                                <rect key="frame" x="0.0" y="0.0" width="123.5" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="123.5" height="21"/>
                                                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12334" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pi2-Sv-tEi">
-                                                                <rect key="frame" x="133.5" y="0.0" width="47.5" height="20.5"/>
+                                                                <rect key="frame" x="133.5" y="0.0" width="47.5" height="21"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
@@ -365,16 +368,16 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5Bw-83-rEG">
-                                                <rect key="frame" x="117.5" y="454" width="140" height="20.5"/>
+                                                <rect key="frame" x="79.5" y="453.5" width="216.5" height="21"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developer:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KH6-B3-VQc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="71" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="71" height="21"/>
                                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ubisoft" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mib-6G-jXH">
-                                                        <rect key="frame" x="81" y="0.0" width="59" height="20.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rockstar Games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mib-6G-jXH">
+                                                        <rect key="frame" x="81" y="0.0" width="135.5" height="21"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -385,17 +388,19 @@
                                                 </constraints>
                                             </stackView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="j7Z-Cg-Jie">
-                                                <rect key="frame" x="8" y="539" width="359" height="208"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="8" y="538.5" width="359" height="208"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="208" id="RUH-VA-6o1"/>
                                                 </constraints>
-                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <mutableString key="text">When a young street hustler, a retired bank robber and a terrifying psychopath find themselves entangled with some of the most frightening and deranged elements of the criminal underworld, the U.S. government and the entertainment industry, they must pull off a series of dangerous heists to survive in a ruthless city in which they can trust nobody, least of all each other.&lt;br&gt; &lt;br&gt;Grand Theft Auto V for PC offers players the option to explore the award-winning world of Los Santos and Blaine County in resolutions of up to 4k and beyond, as well as the chance to experience the game running at 60 frames per second. &lt;br&gt; &lt;br&gt;The game offers players a huge range of PC-specific customization options, including over 25 separate configurable settings for texture quality, shaders, tessellation, anti-aliasing and more, as well as support and extensive customization for mouse and keyboard controls. Additional options include a population density slider to control car and pedestrian traffic, as well as dual and triple monitor support, 3D compatibility, and plug-and-play controller support.  &lt;br&gt; &lt;br&gt;Grand Theft Auto V for PC also includes Grand Theft Auto Online, with support for 30 players and two spectators. Grand Theft Auto Online for PC will include all existing gameplay upgrades and Rockstar-created content released since the launch of Grand Theft Auto Online, including Heists and Adversary modes.&lt;br&gt; &lt;br&gt;The PC version of Grand Theft Auto V and Grand Theft Auto Online features First Person Mode, giving players the chance to explore the incredibly detailed world of Los Santos and Blaine County in an entirely new way.&lt;br&gt; &lt;br&gt;Grand Theft Auto V for PC also brings the debut of the Rockstar Editor, a powerful suite of creative tools to quickly and easily capture, edit and share game footage from within Grand Theft Auto V and Grand Theft Auto Online. The Rockstar Editor\u2019s Director Mode allows players the ability to stage their own scenes using prominent story characters, pedestrians, and even animals to bring their vision to life. Along with advanced camera manipulation and editing effects including fast and slow motion, and an array of camera filters, players can add their own music using songs from GTAV radio stations, or dynamically control the intensity of the game\u2019s score. Completed videos can be uploaded directly from the Rockstar Editor to YouTube and the Rockstar Games Social Club for easy sharing.  &lt;br&gt; &lt;br&gt;Soundtrack artists The Alchemist and Oh No return as hosts of the new radio station, The Lab FM. The station features new and exclusive music from the production duo based on and inspired by the game\u2019s original soundtrack. Collaborating guest artists include Earl Sweatshirt, Freddie Gibbs, Little Dragon, Killer Mike, Sam Herring from Future Islands, and more. Players can also discover Los Santos and Blaine County while enjoying their own music through Self Radio, a new radio station that will host player-created custom soundtracks.&lt;br&gt;&lt;br&gt;Special access content requires Rockstar Games Social Club account. Visit &lt;a href=\"https:\/\/steamcommunity.com\/linkfilter\/?url=http:\/\/rockstargames.com\/v\/bonuscontent\" target=\"_blank\" rel=\"noopener\"  &gt;http:\/\/rockstargames.com\/v\/bonuscontent&lt;\/a&gt; for details.",
+         "about_the_game":"When a young street hustler, a retired bank robber and a terrifying psychopath find themselves entangled with some of the most frightening and deranged elements of the criminal underworld, the U.S. government and the entertainment industry, they must pull off a series of dangerous heists to survive in a ruthless city in which they can trust nobody, least of all each other.&lt;br&gt; &lt;br&gt;Grand Theft Auto V for PC offers players the option to explore the award-winning world of Los Santos and Blaine County in resolutions of up to 4k and beyond, as well as the chance to experience the game running at 60 frames per second. &lt;br&gt; &lt;br&gt;The game offers players a huge range of PC-specific customization options, including over 25 separate configurable settings for texture quality, shaders, tessellation, anti-aliasing and more, as well as support and extensive customization for mouse and keyboard controls. Additional options include a population density slider to control car and pedestrian traffic, as well as dual and triple monitor support, 3D compatibility, and plug-and-play controller support.  &lt;br&gt; &lt;br&gt;Grand Theft Auto V for PC also includes Grand Theft Auto Online, with support for 30 players and two spectators. Grand Theft Auto Online for PC will include all existing gameplay upgrades and Rockstar-created content released since the launch of Grand Theft Auto Online, including Heists and Adversary modes.&lt;br&gt; &lt;br&gt;The PC version of Grand Theft Auto V and Grand Theft Auto Online features First Person Mode, giving players the chance to explore the incredibly detailed world of Los Santos and Blaine County in an entirely new way.&lt;br&gt; &lt;br&gt;Grand Theft Auto V for PC also brings the debut of the Rockstar Editor, a powerful suite of creative tools to quickly and easily capture, edit and share game footage from within Grand Theft Auto V and Grand Theft Auto Online. The Rockstar Editor\u2019s Director Mode allows players the ability to stage their own scenes using prominent story characters, pedestrians, and even animals to bring their vision to life. Along with advanced camera manipulation and editing effects including fast and slow motion, and an array of camera filters, players can add their own music using songs from GTAV radio stations, or dynamically control the intensity of the game\u2019s score. Completed videos can be uploaded directly from the Rockstar Editor to YouTube and the Rockstar Games Social Club for easy sharing.  &lt;br&gt; &lt;br&gt;Soundtrack artists The Alchemist and Oh No return as hosts of the new radio station, The Lab FM. The station features new and exclusive music from the production duo based on and inspired by the game\u2019s original soundtrack. Collaborating guest artists include Earl Sweatshirt, Freddie Gibbs, Little Dragon, Killer Mike, Sam Herring from Future Islands, and more. Players can also discover Los Santos and Blaine County while enjoying their own music through Self Radio, a new radio station that will host player-created custom soundtracks.&lt;br&gt;</mutableString>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jI3-IU-Ebj">
-                                                <rect key="frame" x="136" y="508" width="102" height="24"/>
+                                                <rect key="frame" x="136" y="507.5" width="102" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="dHI-I1-Rap"/>
                                                 </constraints>
@@ -404,7 +409,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ScreenShots" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hJ-AN-SzG">
-                                                <rect key="frame" x="134.5" y="754" width="107" height="22"/>
+                                                <rect key="frame" x="134" y="753.5" width="107" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="22" id="t5n-c8-cvC"/>
                                                 </constraints>
@@ -412,93 +417,90 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZi-pN-jPI">
-                                                <rect key="frame" x="160.5" y="1159" width="54.5" height="24"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kW2-gs-WyV">
+                                                <rect key="frame" x="8" y="1246" width="359" height="246"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="3Cq-Bg-6O9"/>
+                                                    <constraint firstAttribute="height" constant="246" id="4dT-xD-xqv"/>
+                                                </constraints>
+                                                <mutableString key="text">When a young street hustler, a retired bank robber and a terrifying psychopath find themselves entangled with some of the most frightening and deranged elements of the criminal underworld, the U.S. government and the entertainment industry, they must pull off a series of dangerous heists to survive in a ruthless city in which they can trust nobody, least of all each other.&lt;br&gt; &lt;br&gt;Grand Theft Auto V for PC offers players the option to explore the award-winning world of Los Santos and Blaine County in resolutions of up to 4k and beyond, as well as the chance to experience the game running at 60 frames per second. &lt;br&gt; &lt;br&gt;The game offers players a huge range of PC-specific customization options, including over 25 separate configurable settings for texture quality, shaders, tessellation, anti-aliasing and more, as well as support and extensive customization for mouse and keyboard controls. Additional options include a population density slider to control car and pedestrian traffic, as well as dual and triple monitor support, 3D compatibility, and plug-and-play controller support.  &lt;br&gt; &lt;br&gt;Grand Theft Auto V for PC also includes Grand Theft Auto Online, with support for 30 players and two spectators. Grand Theft Auto Online for PC will include all existing gameplay upgrades and Rockstar-created content released since the launch of Grand Theft Auto Online, including Heists and Adversary modes.&lt;br&gt; &lt;br&gt;The PC version of Grand Theft Auto V and Grand Theft Auto Online features First Person Mode, giving players the chance to explore the incredibly detailed world of Los Santos and Blaine County in an entirely new way.&lt;br&gt; &lt;br&gt;Grand Theft Auto V for PC also brings the debut of the Rockstar Editor, a powerful suite of creative tools to quickly and easily capture, edit and share game footage from within Grand Theft Auto V and Grand Theft Auto Online. The Rockstar Editor\u2019s Director Mode allows players the ability to stage their own scenes using prominent story characters, pedestrians, and even animals to bring their vision to life. Along with advanced camera manipulation and editing effects including fast and slow motion, and an array of camera filters, players can add their own music using songs from GTAV radio stations, or dynamically control the intensity of the game\u2019s score. Completed videos can be uploaded directly from the Rockstar Editor to YouTube and the Rockstar Games Social Club for easy sharing.  &lt;br&gt; &lt;br&gt;Soundtrack artists The Alchemist and Oh No return as hosts of the new radio station, The Lab FM. The station features new and exclusive music from the production duo based on and inspired by the game\u2019s original soundtrack. Collaborating guest artists include Earl Sweatshirt, Freddie Gibbs, Little Dragon, Killer Mike, Sam Herring from Future Islands, and more. Players can also discover Los Santos and Blaine County while enjoying their own music through Self Radio, a new radio station that will host player-created custom soundtracks.</mutableString>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="AZw-j6-SeY">
+                                                <rect key="frame" x="88" y="783.5" width="200" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="HCf-lw-S0c"/>
+                                                    <constraint firstAttribute="height" constant="128" id="ZpB-0j-ZwA"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="zrg-SF-5nd">
+                                                <rect key="frame" x="88" y="919.5" width="200" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="GOA-lb-MAA"/>
+                                                    <constraint firstAttribute="height" constant="128" id="KCP-Ak-aMi"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="6" translatesAutoresizingMaskIntoConstraints="NO" id="liH-en-raE">
+                                                <rect key="frame" x="88" y="1055" width="200" height="151"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="06W-mX-xMz"/>
+                                                    <constraint firstAttribute="height" constant="151" id="bjn-lb-z9q"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZi-pN-jPI">
+                                                <rect key="frame" x="160" y="1214" width="55" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="fh7-Sd-Oy5"/>
+                                                    <constraint firstAttribute="width" constant="54.5" id="uGh-Ex-hDI"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1NZ-Zk-kf9">
-                                                <rect key="frame" x="-12.5" y="784" width="400" height="152"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="batman" translatesAutoresizingMaskIntoConstraints="NO" id="XDm-ph-tQz">
-                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="152"/>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="batman" translatesAutoresizingMaskIntoConstraints="NO" id="JM8-iX-yJz">
-                                                        <rect key="frame" x="200" y="0.0" width="200" height="152"/>
-                                                    </imageView>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="152" id="BSs-jQ-49j"/>
-                                                </constraints>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ME3-gW-Mz6">
-                                                <rect key="frame" x="-12.5" y="957" width="400" height="194"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="batman" translatesAutoresizingMaskIntoConstraints="NO" id="bn0-58-cBo">
-                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="194"/>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="batman" translatesAutoresizingMaskIntoConstraints="NO" id="sUG-eh-iff">
-                                                        <rect key="frame" x="200" y="0.0" width="200" height="194"/>
-                                                    </imageView>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="194" id="eMp-XY-mti"/>
-                                                </constraints>
-                                            </stackView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kW2-gs-WyV">
-                                                <rect key="frame" x="8" y="1191" width="359" height="301"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="301" id="OcX-Q0-cVQ"/>
-                                                </constraints>
-                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="ME3-gW-Mz6" firstAttribute="top" secondItem="1NZ-Zk-kf9" secondAttribute="bottom" constant="21" id="1rx-TC-LkG"/>
                                             <constraint firstItem="fce-Sz-ADl" firstAttribute="top" secondItem="YwL-hy-7vN" secondAttribute="bottom" constant="8" id="1yT-Qi-6Al"/>
                                             <constraint firstItem="YwL-hy-7vN" firstAttribute="centerX" secondItem="GND-3l-hNq" secondAttribute="centerX" id="2gf-qK-dPr"/>
-                                            <constraint firstItem="kW2-gs-WyV" firstAttribute="centerX" secondItem="GND-3l-hNq" secondAttribute="centerX" id="3oh-0n-cLr"/>
                                             <constraint firstItem="YwL-hy-7vN" firstAttribute="top" secondItem="Yb3-ha-QvA" secondAttribute="bottom" constant="8" id="3yx-tA-10d"/>
+                                            <constraint firstItem="aZi-pN-jPI" firstAttribute="top" secondItem="liH-en-raE" secondAttribute="bottom" constant="8" id="4Ue-xT-4xs"/>
                                             <constraint firstItem="e8l-Tp-wPQ" firstAttribute="top" secondItem="fce-Sz-ADl" secondAttribute="bottom" constant="30.5" id="4nb-KG-pbo"/>
-                                            <constraint firstAttribute="trailing" secondItem="kW2-gs-WyV" secondAttribute="trailing" constant="8" id="6Ft-s4-UKI"/>
+                                            <constraint firstItem="liH-en-raE" firstAttribute="centerX" secondItem="GND-3l-hNq" secondAttribute="centerX" id="5Qx-bw-3O0"/>
                                             <constraint firstItem="jbb-2r-IIG" firstAttribute="centerX" secondItem="GND-3l-hNq" secondAttribute="centerX" id="9be-yf-mQT"/>
-                                            <constraint firstItem="ME3-gW-Mz6" firstAttribute="centerX" secondItem="GND-3l-hNq" secondAttribute="centerX" id="DzW-k9-CSu"/>
                                             <constraint firstItem="Yb3-ha-QvA" firstAttribute="leading" secondItem="GND-3l-hNq" secondAttribute="leading" id="Ixr-iN-TKm"/>
                                             <constraint firstItem="j7Z-Cg-Jie" firstAttribute="centerX" secondItem="GND-3l-hNq" secondAttribute="centerX" id="Jsc-2k-LOr"/>
-                                            <constraint firstItem="kW2-gs-WyV" firstAttribute="leading" secondItem="GND-3l-hNq" secondAttribute="leading" constant="8" id="KpZ-4n-gpV"/>
                                             <constraint firstAttribute="trailing" secondItem="j7Z-Cg-Jie" secondAttribute="trailing" constant="8" id="LdV-gp-BNV"/>
+                                            <constraint firstItem="AZw-j6-SeY" firstAttribute="top" secondItem="4hJ-AN-SzG" secondAttribute="bottom" constant="8.5" id="NTn-Ej-8oc"/>
                                             <constraint firstItem="j7Z-Cg-Jie" firstAttribute="top" secondItem="jI3-IU-Ebj" secondAttribute="bottom" constant="7" id="Pu0-3q-FlW"/>
                                             <constraint firstItem="e8l-Tp-wPQ" firstAttribute="top" secondItem="fce-Sz-ADl" secondAttribute="bottom" constant="30.5" id="Q3d-rC-qMD"/>
-                                            <constraint firstItem="aZi-pN-jPI" firstAttribute="centerX" secondItem="GND-3l-hNq" secondAttribute="centerX" id="TMd-tP-XHK"/>
+                                            <constraint firstItem="aZi-pN-jPI" firstAttribute="top" secondItem="liH-en-raE" secondAttribute="bottom" constant="8" id="SmJ-Lb-ZC5"/>
                                             <constraint firstItem="j7Z-Cg-Jie" firstAttribute="leading" secondItem="GND-3l-hNq" secondAttribute="leading" constant="8" id="VU4-hH-6nv"/>
                                             <constraint firstItem="jbb-2r-IIG" firstAttribute="top" secondItem="e8l-Tp-wPQ" secondAttribute="bottom" constant="29.5" id="Vkt-hY-mPd"/>
                                             <constraint firstItem="5Bw-83-rEG" firstAttribute="top" secondItem="jbb-2r-IIG" secondAttribute="bottom" constant="23.5" id="Vt9-81-5yN"/>
                                             <constraint firstItem="j7Z-Cg-Jie" firstAttribute="top" secondItem="jI3-IU-Ebj" secondAttribute="bottom" constant="7" id="Yvm-om-1zN"/>
+                                            <constraint firstItem="zrg-SF-5nd" firstAttribute="centerX" secondItem="GND-3l-hNq" secondAttribute="centerX" id="Z8Y-m7-jLi"/>
                                             <constraint firstAttribute="trailing" secondItem="Yb3-ha-QvA" secondAttribute="trailing" id="ZVC-3B-wdy"/>
-                                            <constraint firstItem="kW2-gs-WyV" firstAttribute="top" secondItem="aZi-pN-jPI" secondAttribute="bottom" constant="8" id="a3j-3D-8J2"/>
-                                            <constraint firstItem="aZi-pN-jPI" firstAttribute="top" secondItem="ME3-gW-Mz6" secondAttribute="bottom" constant="8" id="aN9-6R-AYP"/>
+                                            <constraint firstItem="kW2-gs-WyV" firstAttribute="trailing" secondItem="j7Z-Cg-Jie" secondAttribute="trailing" id="abw-5j-YH1"/>
                                             <constraint firstItem="5Bw-83-rEG" firstAttribute="centerX" secondItem="GND-3l-hNq" secondAttribute="centerX" id="bEp-cL-w2u"/>
+                                            <constraint firstItem="liH-en-raE" firstAttribute="top" secondItem="zrg-SF-5nd" secondAttribute="bottom" constant="7.5" id="bUg-2w-cPF"/>
                                             <constraint firstItem="Yb3-ha-QvA" firstAttribute="top" secondItem="GND-3l-hNq" secondAttribute="top" id="bW5-KR-vI0"/>
-                                            <constraint firstAttribute="bottom" secondItem="kW2-gs-WyV" secondAttribute="bottom" constant="8" id="eBB-z4-APA"/>
                                             <constraint firstItem="e8l-Tp-wPQ" firstAttribute="centerX" secondItem="GND-3l-hNq" secondAttribute="centerX" id="eDl-dn-a37"/>
                                             <constraint firstItem="4hJ-AN-SzG" firstAttribute="top" secondItem="j7Z-Cg-Jie" secondAttribute="bottom" constant="7" id="eux-qp-Hte"/>
                                             <constraint firstItem="jbb-2r-IIG" firstAttribute="top" secondItem="e8l-Tp-wPQ" secondAttribute="bottom" constant="29.5" id="g0d-5h-yTb"/>
                                             <constraint firstItem="4hJ-AN-SzG" firstAttribute="centerX" secondItem="GND-3l-hNq" secondAttribute="centerX" id="gw6-Km-L5r"/>
-                                            <constraint firstItem="1NZ-Zk-kf9" firstAttribute="centerX" secondItem="GND-3l-hNq" secondAttribute="centerX" id="hIA-sw-aii"/>
+                                            <constraint firstItem="kW2-gs-WyV" firstAttribute="top" secondItem="aZi-pN-jPI" secondAttribute="bottom" constant="8" symbolic="YES" id="myi-9S-dgr"/>
                                             <constraint firstItem="jI3-IU-Ebj" firstAttribute="top" secondItem="5Bw-83-rEG" secondAttribute="bottom" constant="33.5" id="n4z-7m-Lqm"/>
                                             <constraint firstItem="4hJ-AN-SzG" firstAttribute="top" secondItem="j7Z-Cg-Jie" secondAttribute="bottom" constant="7" id="na4-RQ-ijb"/>
+                                            <constraint firstItem="kW2-gs-WyV" firstAttribute="bottom" secondItem="GND-3l-hNq" secondAttribute="bottomMargin" id="oBO-2n-VJB"/>
+                                            <constraint firstItem="AZw-j6-SeY" firstAttribute="centerX" secondItem="GND-3l-hNq" secondAttribute="centerX" id="oXz-4H-kAH"/>
                                             <constraint firstItem="Yb3-ha-QvA" firstAttribute="centerX" secondItem="GND-3l-hNq" secondAttribute="centerX" id="rBF-LE-tMG"/>
                                             <constraint firstItem="fce-Sz-ADl" firstAttribute="centerX" secondItem="GND-3l-hNq" secondAttribute="centerX" id="s6K-0Z-uz5"/>
                                             <constraint firstItem="fce-Sz-ADl" firstAttribute="top" secondItem="YwL-hy-7vN" secondAttribute="bottom" constant="8" id="sD9-zG-eNq"/>
-                                            <constraint firstItem="1NZ-Zk-kf9" firstAttribute="top" secondItem="4hJ-AN-SzG" secondAttribute="bottom" constant="8" id="tKa-6g-Yqg"/>
+                                            <constraint firstItem="aZi-pN-jPI" firstAttribute="centerX" secondItem="GND-3l-hNq" secondAttribute="centerX" id="tiE-sF-atE"/>
+                                            <constraint firstItem="zrg-SF-5nd" firstAttribute="top" secondItem="AZw-j6-SeY" secondAttribute="bottom" constant="8" id="tyl-gO-KNa"/>
+                                            <constraint firstItem="kW2-gs-WyV" firstAttribute="leading" secondItem="j7Z-Cg-Jie" secondAttribute="leading" id="uom-LQ-upF"/>
                                             <constraint firstItem="jI3-IU-Ebj" firstAttribute="centerX" secondItem="GND-3l-hNq" secondAttribute="centerX" id="xDx-TH-qUV"/>
                                         </constraints>
                                     </view>
@@ -537,10 +539,6 @@
                         <outlet property="_recommendationLbl" destination="Pi2-Sv-tEi" id="CMG-FH-UpN"/>
                         <outlet property="_requiredAgeLbl" destination="kLc-yx-ue1" id="8f1-Yh-vF8"/>
                         <outlet property="aboutGameText" destination="kW2-gs-WyV" id="ALP-Q9-cV5"/>
-                        <outlet property="screenShot1" destination="XDm-ph-tQz" id="4Gi-qA-CyZ"/>
-                        <outlet property="screenShot2" destination="JM8-iX-yJz" id="gK7-us-Qko"/>
-                        <outlet property="screenShot23" destination="bn0-58-cBo" id="8Vr-yB-qpN"/>
-                        <outlet property="screenShot4" destination="sUG-eh-iff" id="dg5-3F-Fsz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kvq-ck-eNd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -549,9 +547,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1" width="600" height="337"/>
         <image name="344330-200" width="200" height="200"/>
+        <image name="4" width="600" height="337"/>
+        <image name="6" width="600" height="337"/>
         <image name="Steam-OS-Planet-Steam-Logo" width="854" height="480"/>
-        <image name="batman" width="200" height="194"/>
+        <image name="header" width="460" height="215"/>
         <image name="steam" width="760" height="428"/>
     </resources>
 </document>

@@ -77,6 +77,7 @@
 		18587AEE20EA64B700DDC6F8 /* Steam */ = {
 			isa = PBXGroup;
 			children = (
+				18823F0C20EF51E200E1983A /* Resources */,
 				18823EE920EC1AA400E1983A /* Controller */,
 				18823EE220EB625500E1983A /* Utils */,
 				18823EDF20EB5FC900E1983A /* View */,
@@ -87,9 +88,6 @@
 				18587AF820EA64B800DDC6F8 /* LaunchScreen.storyboard */,
 				1805702C20EB4C480098C608 /* credentials.plist */,
 				18587AFB20EA64B800DDC6F8 /* Info.plist */,
-				18823EDD20EB593A00E1983A /* Steam1.ttf */,
-				18823EDC20EB593A00E1983A /* Steam.ttf */,
-				18823EE520EB673600E1983A /* steamGames.json */,
 			);
 			path = Steam;
 			sourceTree = "<group>";
@@ -126,6 +124,16 @@
 				18823EEC20ECB15900E1983A /* GameDetailViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		18823F0C20EF51E200E1983A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				18823EDC20EB593A00E1983A /* Steam.ttf */,
+				18823EDD20EB593A00E1983A /* Steam1.ttf */,
+				18823EE520EB673600E1983A /* steamGames.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		22502FB0E038737452E23008 /* Frameworks */ = {
