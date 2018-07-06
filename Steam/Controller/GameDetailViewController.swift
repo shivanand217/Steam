@@ -73,9 +73,9 @@ class GameDetailViewController: UIViewController {
                             
                             let type = data2["type"] as! String
                             let name = data2["name"] as! String
-                            let appid = "\(data2["steam_appid"] as! String)"
+                            let appid = "\(data2["steam_appid"] as! Int)"
                                 
-                            let age = "\(data2["required_age"] as! String)"
+                            let age = data2["required_age"] as! Int
                             let free = data2["is_free"] as! Bool
                             let description = data2["detailed_description"] as! String
                             let aboutGame = data2["about_the_game"] as! String
@@ -89,6 +89,7 @@ class GameDetailViewController: UIViewController {
                             if let _metacritic = data2["metacritic"] as? Dictionary<String, Any> {
                                 metacritic = "\(_metacritic["score"] as! Int)"
                             }
+                            
                             if let screenShots = data2["screenshots"] as? [Dictionary<String, Any>] {
                                 var i = 0
                                 for screen in screenShots {
@@ -110,22 +111,32 @@ class GameDetailViewController: UIViewController {
                                 recommendations = "\(recom["total"] as! Int)"
                             }
                             
+                            let Description = description.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+                            let About = aboutGame.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+                            
                             /** Update UI **/
                             self._developerLbl.text = developer
                             self._priceLbl.text = price
-                            self._metacriticScoreLbl.text = metacritic
+                            if metacritic == nil {
+                                self._metacriticScoreLbl.text = "NA"
+                            } else {
+                                self._metacriticScoreLbl.text = metacritic
+                            }
                             self._recommendationLbl.text = recommendations
                             self._nameLbl.text = name
                             self._gameIDLbl.text = appid
-                            self._requiredAgeLbl.text = age
+                            if age == 0 {
+                                self._requiredAgeLbl.text = "NA"
+                            } else {
+                                self._requiredAgeLbl.text = "\(age)"
+                            }
                             if free == false {
                                 self._isFreeLbl.text = "NO"
                             } else {
                                 self._isFreeLbl.text = "YES"
                             }
-                            self._descriptionText.text = description
-                            self.aboutGameText.text = aboutGame
-                            
+                            self._descriptionText.text = Description
+                            self.aboutGameText.text = About
                             
                             /** Update Images **/
                             Alamofire.request(screenShotURL1, method: .get).responseImage { (response) in
