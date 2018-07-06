@@ -178,27 +178,12 @@ class Game {
             return _aboutGame!
         }
     }
+    
     init(name: String, appID: String) {
         self._name = name
         self._appID = appID
         self._gameURL = "\(gameData)\(_appID)"
     }
     
-//    func downloadGameDetails(completed: @escaping DownloadCompleted) {
-//
-//        Alamofire.request(self._gameURL, method: .get).responseJSON { (response) in
-//
-//            if let dict = response.result.value as? Dictionary<String, AnyObject> {
-//
-//                if let content = dict["\(self._appID)"] as? Dictionary<String, AnyObject> {
-//                    print(content)
-//                    if let gameData = content["data"] as? Dictionary<String, AnyObject> {
-//                        print(gameData)
-//                    }
-//                }
-//            }
-//            completed()
-//        }
-//    }
     
 }
