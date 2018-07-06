@@ -18,6 +18,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         if let error = error {
             print("\(error.localizedDescription)")
         } else {
+            
+            let userId = user.userID
+            let email = user.profile.email
+           
+        }
+    }
+    
+    /*func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        
+        if let error = error {
+            print("\(error.localizedDescription)")
+        } else {
             let userId = user.userID                 
             let idToken = user.authentication.idToken // Safe to send to the server
             let fullName = user.profile.name
@@ -25,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             let familyName = user.profile.familyName
             let email = user.profile.email
         }
-    }
+     }*/
         
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
               withError error: Error!) {

@@ -27,8 +27,20 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
             print(error)
             return
         }
-        print(user.profile.email)
+        
+        // if no error then go to gameViewController
+        print("user sign in with: \(user.profile.email)")
+        performSegue(withIdentifier: "gameViewController", sender: self)
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "gameViewController" {
+            if segue.destination is GameViewController {
+                // do nothing go to gameViewController
+            }
+        }
+    }
+    
 }
 

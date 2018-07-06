@@ -7,6 +7,7 @@
 import UIKit
 import SwiftyJSON
 import Alamofire
+import GoogleSignIn
 
 class GameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -109,9 +110,8 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     // Show details
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {0
         
-        let game = appIds[indexPath.row]
         performSegue(withIdentifier: "gameDetailViewController", sender: self)
     }
     
@@ -119,15 +119,19 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         return 1
     }
     
+    @IBAction func logOutButtonPressed(_ sender: Any) {
+        GIDSignIn.sharedInstance().signOut()
+        dismiss(animated: true, completion: nil)
+        print("user successfully signedOut.")
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "gameDetailViewController" {
             if let detailsVC = segue.destination as? GameDetailViewController {
-                if let game = sender as? String {
-                    detailsVC.passedValue = game
-                }
+                detailsVC.passedValueCell = sender as? GameCell
             }
         }
     }
+    
     
 }

@@ -15,6 +15,8 @@ class GameCell: UITableViewCell {
     @IBOutlet weak var gameNameLbl: UILabel!
     @IBOutlet weak var playersOnline: UILabel!
     
+    var appId: String!
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
@@ -34,6 +36,8 @@ class GameCell: UITableViewCell {
     
     // Configure cells with game item
     func configureCell(appID: String) {
+        
+        appId = appID
         
         let imageUrl = "\(image_BASE_URL)\(appID)\(header)"
         Alamofire.request(imageUrl, method: .get).responseImage { (response) in
