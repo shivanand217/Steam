@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 
 class GameDetailViewController: UIViewController {
     
@@ -23,21 +24,27 @@ class GameDetailViewController: UIViewController {
     @IBOutlet weak var _recommendationLbl: UILabel!
     @IBOutlet weak var _developerLbl: UILabel!
     @IBOutlet weak var _descriptionText: UITextView!
+    @IBOutlet weak var aboutGameText: UITextView!
     
-    // four screenshots taken
+    // Four screenshots taken
     @IBOutlet weak var screenShot1: UIImageView!
     @IBOutlet weak var screenShot2: UIImageView!
     @IBOutlet weak var screenShot23: UIImageView!
     @IBOutlet weak var screenShot4: UIImageView!
-    @IBOutlet weak var aboutGameText: UITextView!
+    
+    var screenUrl1: String!
+    var screenUrl2: String!
+    var screenUrl3: String!
+    var screenUrl4: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        downloadAndUpdateData()
+        updateScreenShots()
     }
     
-    func downloadData() {
+    func downloadAndUpdateData() {
         
         var url_path = "\(gameData)"
         url_path = url_path + appid
@@ -50,60 +57,95 @@ class GameDetailViewController: UIViewController {
                     
                     if let data2 = data1["data"] as? Dictionary<String, Any> {
                         
-                        // check if the type of this appId is game
+                        // Check if the type of this appId is game
                         if data2["type"] as? String == "game" {
                             
                             let name = (data2["name"] as? String)!
                             let appID = self.appid
                             
+                            self._nameLbl.text = name
                             
+                            self._gameIDLbl.text = appID
                             
-                            _game.requiredAge = "12"
+                            self._requiredAgeLbl.text = "\(String(describing: data["required_age"]))"
                             
                             if data2["is_free"] as? Bool == false {
-                                _game.isFree = "false"
+                                self._isFreeLbl.text = "NO"
                             } else {
-                                _game.isFree = "true"
+                                self._isFreeLbl.text = "YES"
                             }
-                            _game.isFree = "false"
                             
-                            _game.detailedDescription = (data2["detailed_description"] as? String)!
-                            _game.aboutGame = (data2["about_the_game"] as? String)!
+                            self._descriptionText.text = "\(String(describing: data["detailed_description"]))"
+                            
+                            self.aboutGameText.text = "\(String(describing: data["about_the_game"]))"
                             
                             if let data3 = data2["developers"] as? [String] {
-                                _game.developer = data3[0]
+                                self._developerLbl.text = "\(data3[0])"
                             }
                             
                             if let price_detail = data2["price_overview"] as? Dictionary<String, Any> {
-                                _game.price = "1276"
+                                self._priceLbl.text = "\(String(describing: price_detail["final"]))"
                             }
                             
                             if let metacritic = data2["metacritic"] as? Dictionary<String, Any> {
-                                _game.metacriticScore = "21"
+                                self._metacriticScoreLbl.text = "\(String(describing: metacritic["score"]))"
                             }
                             
                             var i = 0
                             if let screenShots = data2["screenshots"] as? [Dictionary<String, Any>] {
                                 for screen in screenShots {
                                     if i == 0 {
-                                        _game.screenShotURL1 = (screen["path_thumbnail"] as? String)!
+                                        self.screenUrl1 = "\(String(describing: screen["path_thumbnail"]))"
                                     } else if i == 1 {
-                                        _game.screenShotURL2 = (screen["path_thumbnail"] as? String)!
+                                        self.screenUrl2 = "\(String(describing: screen["path_thumbnail"]))"
                                     } else if i == 2 {
-                                        _game.screenShotURL3 = (screen["path_thumbnail"] as? String)!
+                                        self.screenUrl3 = "\(String(describing: screen["path_thumbnail"]))"
                                     } else {
-                                        _game.screenShotURL4 = (screen["path_thumbnail"] as? String)!
+                                        self.screenUrl4 = "\(String(describing: screen["path_thumbnail"]))"
                                     }
                                     i += 1
                                 }
                             }
                             
-                            _game.recommendations = "ok."
-                            
-                            //self.games.append(_game)
+                            if let recommendations = data2["recommendations"] as? Dictionary<String, Any> {
+                                self._recommendationLbl.text = "\(String(describing: recommendations["total"]))"
+                            }
                         }
                     }
                 }
+            }
+        }
+    }
+    
+    func updateScreenShots() {
+        
+        // Four Requests for Screenshots
+        Alamofire.request(screenUrl1, method: .get).responseImage { (response) in
+            if let image = response.result.value {
+                self.screenShot1.image = image
+            } else {
+                self.screenShot1.image = UIImage(named: "batman")
+            }
+        }
+        Alamofire.request(screenUrl2, method: .get).responseImage { (response) in
+            if let image = response.result.value {
+                self.screenShot2.image = image
+            } else {
+                self.screenShot2.image = UIImage(named: "batman")
+            }
+        }
+        Alamofire.request(screenUrl3, method: .get).responseImage { (response) in
+            if let image = response.result.value {
+                self.screenShot23.image = image
+            } else {
+                self.screenShot23.image = UIImage(named: "batman")
+            }
+        }
+        Alamofire.request(screenUrl4, method: .get).responseImage { (response) in
+            if let image = response.result.value {
+                self.screenShot4.image = image
+            } else {
+                self.screenShot4.image = UIImage(named: "batman")
             }
         }
     }
