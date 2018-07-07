@@ -14,5 +14,6 @@ target 'Steam' do
     pod 'SwiftyJSON'
     pod 'Alamofire'
     pod 'AlamofireImage'
+    pod 'ProgressHUD'
 
 end

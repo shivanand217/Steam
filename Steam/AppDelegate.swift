@@ -7,6 +7,7 @@
 
 import UIKit
 import GoogleSignIn
+import ProgressHUD
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -21,24 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             
             let userId = user.userID
             let email = user.profile.email
-           
         }
     }
     
-    /*func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        
-        if let error = error {
-            print("\(error.localizedDescription)")
-        } else {
-            let userId = user.userID                 
-            let idToken = user.authentication.idToken // Safe to send to the server
-            let fullName = user.profile.name
-            let givenName = user.profile.givenName
-            let familyName = user.profile.familyName
-            let email = user.profile.email
-        }
-     }*/
-        
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
               withError error: Error!) {
         // Perform any operations when the user disconnects from app here.
@@ -47,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             print(error)
             return
         }
-        print("\(user.profile.email) has been successfully logged out.")
+        ProgressHUD.showSuccess("Successfully signedOut.", interaction: false)
         GIDSignIn.sharedInstance().signOut()
     }
 

@@ -10,6 +10,8 @@ import UIKit
 import FacebookLogin
 import GoogleSignIn
 
+import ProgressHUD
+
 class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
     
     override func viewDidLoad() {
@@ -29,6 +31,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
         }
         
         // if no error then go to gameViewController
+        ProgressHUD.showSuccess("Successfully signed in with \(user.profile.email as! String)", interaction: false)
         print("user sign in with: \(user.profile.email)")
         performSegue(withIdentifier: "gameViewController", sender: self)
     }

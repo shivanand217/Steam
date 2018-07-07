@@ -8,6 +8,7 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 import GoogleSignIn
+import ProgressHUD
 
 class GameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -109,9 +110,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    // Show details
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {0
-        
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "gameDetailViewController", sender: self)
     }
     
@@ -120,9 +119,9 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @IBAction func logOutButtonPressed(_ sender: Any) {
+        ProgressHUD.showSuccess("Successfully signedOut.", interaction: false)
         GIDSignIn.sharedInstance().signOut()
         dismiss(animated: true, completion: nil)
-        print("user successfully signedOut.")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

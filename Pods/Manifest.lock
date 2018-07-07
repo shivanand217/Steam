@@ -47,6 +47,7 @@ PODS:
   - GTMSessionFetcher/Core (1.1.15)
   - GTMSessionFetcher/Full (1.1.15):
     - GTMSessionFetcher/Core (= 1.1.15)
+  - ProgressHUD (2.51)
   - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
@@ -58,6 +59,7 @@ DEPENDENCIES:
   - FacebookShare
   - FBSDKShareKit
   - GoogleSignIn
+  - ProgressHUD
   - SwiftyJSON
 
 SPEC REPOS:
@@ -75,6 +77,7 @@ SPEC REPOS:
     - GoogleToolboxForMac
     - GTMOAuth2
     - GTMSessionFetcher
+    - ProgressHUD
     - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -91,8 +94,9 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
+  ProgressHUD: 54b4c2fa202bf3da7dddc1c698ae4e6376333bd9
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 73b3465e07064802d482a239109c779ffe0690c7
+PODFILE CHECKSUM: fa4d82ad4e591065929964077d472fb748bcc981
 
 COCOAPODS: 1.5.0
