@@ -179,10 +179,4 @@ class GameDetailViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func logoutBtnPressed(_ sender: Any) {
-        GIDSignIn.sharedInstance().signOut()
-        dismiss(animated: true, completion: nil)
-        print("user successfully signedOut.")
-    }
-    
 }

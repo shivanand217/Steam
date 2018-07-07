@@ -204,20 +204,6 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ssc-3B-DSx">
-                                                        <rect key="frame" x="319" y="34" width="51" height="30"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="30" id="1gn-Q4-O5D"/>
-                                                            <constraint firstAttribute="width" constant="51" id="c4y-NC-yuK"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                        <state key="normal" title="LogOut">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="logoutBtnPressed:" destination="gAG-or-0Hp" eventType="touchUpInside" id="gdA-fB-I76"/>
-                                                        </connections>
-                                                    </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThD-R8-UaP">
                                                         <rect key="frame" x="8" y="32" width="40" height="35"/>
                                                         <constraints>
@@ -234,11 +220,8 @@
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="Ssc-3B-DSx" firstAttribute="top" secondItem="Yb3-ha-QvA" secondAttribute="top" constant="34" id="6Yd-g4-E6E"/>
                                                     <constraint firstItem="lRY-YC-km5" firstAttribute="top" secondItem="Yb3-ha-QvA" secondAttribute="top" constant="34" id="8ML-2R-NWY"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Ssc-3B-DSx" secondAttribute="trailing" constant="5" id="9Pf-Zl-ARi"/>
                                                     <constraint firstAttribute="bottom" secondItem="ThD-R8-UaP" secondAttribute="bottom" constant="32" id="C1f-7K-9K9"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Ssc-3B-DSx" secondAttribute="bottom" constant="35" id="Klw-nh-DP6"/>
                                                     <constraint firstAttribute="height" constant="99" id="Lj2-CT-Stx"/>
                                                     <constraint firstAttribute="bottom" secondItem="lRY-YC-km5" secondAttribute="bottom" constant="35" id="X5N-9S-Bgh"/>
                                                     <constraint firstItem="lRY-YC-km5" firstAttribute="centerX" secondItem="Yb3-ha-QvA" secondAttribute="centerX" id="f7R-RO-4pE"/>
