@@ -29,14 +29,12 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.dataSource = self
         
         loadInitialData()
-        // filterAppIDs()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    // ParseJson
     func loadInitialData() {
         
         guard let fileName = Bundle.main.path(forResource: "steamGames", ofType: "json")

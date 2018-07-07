@@ -26,7 +26,6 @@ class GameDetailViewController: UIViewController {
     @IBOutlet weak var _descriptionText: UITextView!
     @IBOutlet weak var aboutGameText: UITextView!
     
-    // Four screenshots taken
     @IBOutlet weak var screenShot1: UIImageView!
     @IBOutlet weak var screenShot2: UIImageView!
     @IBOutlet weak var screenShot3: UIImageView!

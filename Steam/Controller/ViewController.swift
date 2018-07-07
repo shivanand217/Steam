@@ -40,7 +40,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
         
         if segue.identifier == "gameViewController" {
             if segue.destination is GameViewController {
-                // do nothing go to gameViewController
+                // do nothing, just go to gameViewController
             }
         }
     }

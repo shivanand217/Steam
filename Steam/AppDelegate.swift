@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         if let error = error {
             print("\(error.localizedDescription)")
         } else {
-            
             let userId = user.userID
             let email = user.profile.email
         }
@@ -38,10 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Initialize sign-in
         GIDSignIn.sharedInstance().clientID = "605700366308-1hesimva0c3vra21gn5ivuifbaje9noj.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
-        
         return true
     }
     
@@ -51,7 +48,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                                                  annotation: options[UIApplicationOpenURLOptionsKey.annotation])
     }
     
-    // for this to work on iOS-8 or older
     private func application(application: UIApplication,
                      openURL url: URL, sourceApplication: String?, annotation: Any?) -> Bool {
         var options: [String: AnyObject] = [UIApplicationOpenURLOptionsKey.sourceApplication.rawValue: sourceApplication as AnyObject,
@@ -62,8 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+        
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
